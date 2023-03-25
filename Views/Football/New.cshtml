@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "create";
+}
+
+<h2>create</h2>
+
+<form action="/Football/create" method="POST">
+    <div>
+        <label>Enter club name: </label> <input type="text" name="clubName" />
+    </div>
+    <div>
+        <label>Enter Goal Scored: </label> <input type="number" name="GoalScored" />
+    </div>
+    <div>
+        <label>Enter Goal Coneceded: </label> <input type="number" name="GoalConceded" />
+    </div>
+    <div>
+        <label>Enter Club Nationality: </label> <input type="text" name="Nationality" />
+    </div>
+    <div>
+        <input type="submit" value="Add the Club" />
+    </div>
+</form>
+

@@ -1,0 +1,23 @@
+﻿
+@model IEnumerable < FootballLeague.Models.FootballDto>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+
+
+
+    @foreach (var footballData in Model)
+    {
+        <div class="footballDataItem">
+            <h2><a href="/football/Details/@footballData.clubID">@footballData.clubName</a></h2>
+            <div class="userDetails">Club ID: @footballData.clubID</div>
+            <div class="userDetails">Club Name: @footballData.clubName</div>
+            <div class="userDetails">Goals Scored: @footballData.goalsScored</div>
+            <div class="userDetails">Goals Conceeded: @footballData.goalsConceeded</div>
+            <div class="userDetails">Nationality: @footballData.Nationality</div>
+        </div>
+    }
+</div>

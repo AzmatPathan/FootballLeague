@@ -1,0 +1,25 @@
+﻿@model FootballLeague.Models.MatchesDto
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<form action="/Matches/Update/@Model.matchID" method="POST">
+    <div>
+
+        <label>Home Club: </label> <input type="text" name="homeClub" value="@Model.homeClub" />
+    </div>
+    <div>
+        <label>Away Club: </label> <input type="text" name="awayClub" value="@Model.awayClub" />
+    </div>
+    <div>
+        <input type="hidden" name="matchID" value="@Model.matchID" />
+        <label>Score: </label> <input type="text" name="score" value="@Model.score" />
+    </div>
+    
+    <div>
+        <input type="submit" value="Update" />
+    </div>
+</form>
+
+

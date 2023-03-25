@@ -1,0 +1,25 @@
+﻿@model FootballLeague.Models.ViewModels.DetailsMatches
+@{
+    ViewBag.Title = "details";
+}
+
+<h2>List</h2>
+
+<a href="/Matches/List">Go back to List</a> 
+<a href="/Matches/DeleteConfirm/@Model.selectedMatches.matchID">Delete Match Record</a>
+<div class="footballDataItem">
+    <h2><a href="/Matches/Details/@Model.selectedMatches.matchID" id="footballDataName"></a></h2>
+    <div class="userDetails">Match ID: @Model.selectedMatches.matchID</div>
+    <div class="userDetails">Home Club: @Model.selectedMatches.homeClub</div>
+    <div class="userDetails">Away Club: @Model.selectedMatches.awayClub</div>
+    <div class="userDetails">Score: @Model.selectedMatches.score</div>
+</div>
+
+<div>
+    <h3>Clubs who played in Match @Model.selectedMatches.matchID</h3>
+
+    @foreach (var Football in Model.ResponsibleFootball)
+    {
+        <a href="/Football/Details/@Football.clubID">@Football.clubName</a><br />
+    }
+</div>

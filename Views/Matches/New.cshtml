@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New</h2>
+
+
+
+
+<form action="/Matches/create" method="POST">
+    <div>
+        <label>Enter Match Number : </label> <input type="number" name="MatchName" />
+    </div>
+    <div>
+        <label>Enter Home Club: </label> <input type="text" name="HomeClub" />
+    </div>
+    <div>
+        <label>Enter Away Club: </label> <input type="text" name="AwayClub" />
+    </div>
+    <div>
+        <label>Enter Scoreline: </label> <input type="text" name="score" />
+    </div>
+    <div>
+        <input type="submit" value="Add the Match" />
+    </div>
+</form>
+

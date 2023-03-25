@@ -1,0 +1,18 @@
+﻿@model FootballLeague.Models.FootballDto
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>DeleteConfirm</h2>
+
+
+<h2>Are you sure you want to delete?</h2>
+<a href="/Football/List">Go back to list</a>
+<h2>Club Name: @Model.clubName</h2>
+<div>Goals Scored: @Model.goalsScored</div>
+<div>Goals Conceded: @Model.goalsConceeded</div>
+<div>Club Nationality: @Model.Nationality</div>
+
+<form action="/Football/Delete/@Model.clubID" method="POST">
+    <input type="submit" value="Delete" />
+</form>
