@@ -9,6 +9,7 @@
 
 
 
+<a href="/Matches/New">Add Match</a>
 
 
 @foreach (var matchesData in Model)
@@ -16,9 +17,9 @@
     <div class="matchesDataItem">
         <h2><a href="/matches/Details/@matchesData.matchID">@matchesData.matchID</a></h2>
         <div class="userDetails">Club ID: @matchesData.matchID</div>
-        <div class="userDetails">Club Name: @matchesData.homeClub</div>
-        <div class="userDetails">Goals Scored: @matchesData.awayClub</div>
-        <div class="userDetails">Goals Conceeded: @matchesData.score</div>
+        <div class="userDetails">Home Club: @matchesData.homeClub</div>
+        <div class="userDetails">Away Club: @matchesData.awayClub</div>
+        <div class="userDetails">Score: @matchesData.score</div>
     </div>
 }
 </div>
